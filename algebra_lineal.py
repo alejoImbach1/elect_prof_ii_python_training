@@ -31,3 +31,9 @@ def add (v1: Vector, v2: Vector) -> Vector:
 def substract (v1: Vector, v2: Vector) -> Vector:
     assert len(v1) == len(v2), "Different sizes!"
     return [v1_i - v2_i for v1_i, v2_i in zip(v1,v2)]
+
+
+# Producto punto
+def dot(v1: Vector, v2: Vector) -> float:
+    assert len(v1) == len(v2), "Different size!"
+    return sum(v1 * v2 for v1, v2 in zip(v1,v2))
